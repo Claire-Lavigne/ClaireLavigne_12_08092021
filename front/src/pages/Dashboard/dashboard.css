@@ -1,0 +1,48 @@
+.dashboard header h1 {
+  font-size: 48px;
+  padding-bottom: 24px;
+}
+
+.dashboard header h1 span {
+  color: #e60000;
+}
+
+.dashboard header p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.dashboard .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Activity Activity Activity Keys"
+    "Activity Activity Activity Keys"
+    "Sessions Graph score Keys"
+    "Sessions Graph score Keys";
+  width: 100%;
+  height: 100%;
+}
+
+.Keys {
+  grid-area: Keys;
+}
+
+.Activity {
+  grid-area: Activity;
+}
+
+.Sessions {
+  grid-area: Sessions;
+}
+
+.Graph {
+  grid-area: Graph;
+}
+
+.score {
+  grid-area: score;
+}

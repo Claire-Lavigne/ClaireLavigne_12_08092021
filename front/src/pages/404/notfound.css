@@ -1,0 +1,37 @@
+.notFound {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.notFoundTitle {
+  font-weight: bold;
+  font-size: var(--elephant);
+  color: #e60000;
+  margin-bottom: 0;
+}
+
+.notFoundSubtitle {
+  color: #e60000;
+}
+
+.notFoundLink {
+  margin: 100px auto;
+  font-size: var(--mouse);
+  color: #e60000;
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 600px) {
+  .notFoundTitle {
+    font-size: var(--t-rex);
+  }
+  .notFoundSubtitle {
+    font-size: calc(var(--human) * 2);
+  }
+  .notFoundLink {
+    font-size: var(--human);
+  }
+}
