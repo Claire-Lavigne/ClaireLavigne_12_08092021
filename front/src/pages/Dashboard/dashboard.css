@@ -19,30 +19,50 @@
   gap: 20px;
   grid-auto-flow: row;
   grid-template-areas:
-    "Activity Activity Activity Keys"
-    "Activity Activity Activity Keys"
-    "Sessions Graph score Keys"
-    "Sessions Graph score Keys";
+    "Activity Activity Activity Cards"
+    "Activity Activity Activity Cards"
+    "Sessions Radar Score Cards"
+    "Sessions Radar Score Cards";
   width: 100%;
   height: 100%;
 }
 
-.Keys {
-  grid-area: Keys;
+.Cards {
+  grid-area: Cards;
 }
 
 .Activity {
   grid-area: Activity;
+  width: 835px;
+  height: 320px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
 }
 
 .Sessions {
   grid-area: Sessions;
+  width: 258px;
+  height: 263px;
+  background: #ff0000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
 }
 
-.Graph {
-  grid-area: Graph;
+.Radar {
+  grid-area: Radar;
+  width: 258px;
+  height: 263px;
+  background: #282d30;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
 }
 
-.score {
-  grid-area: score;
+.Score {
+  grid-area: Score;
+  width: 258px;
+  height: 263px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
 }

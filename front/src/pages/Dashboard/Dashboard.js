@@ -25,11 +25,6 @@ const Dashboard = (props) => {
   let sessionsDatas = data[2].sessions;
   let activityType = data[3];
 
-  console.log("user infos", userDatas);
-  console.log("activity datas", dailyActivity);
-  console.log("sessions", sessionsDatas);
-  console.log("activity type", activityType);
-
   return (
     <div className="wrapper">
       <MainNav userID={userDatas.id} />
@@ -42,11 +37,24 @@ const Dashboard = (props) => {
           <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </header>
         <div className="grid-container">
-          <Activity className="Activity" />
-          <Sessions className="Sessions" />
-          <Performance className="Graph" />
-          <Performance className="score" />
-          <div className="keys">
+          <div className="Activity">
+            {/* activité quotidienne - BarChart */}
+            <Activity activity={dailyActivity} />
+          </div>
+          <div className="Sessions">
+            {/* Session durée - LineChart - jour de la semaine */}
+            <Sessions sessions={sessionsDatas} />
+          </div>
+          <div className="Radar">
+            {/* type d’activité - radar chart */}
+            <Performance type={activityType} />
+          </div>
+          <div className="Score">
+            {/* score moyen - RadialBarChart */}
+            <Performance objective={userDatas.todayScore} />
+          </div>
+
+          <div className="Cards">
             <Card title={userDatas.keyData} />
           </div>
         </div>
