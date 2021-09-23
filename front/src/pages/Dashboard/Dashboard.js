@@ -2,7 +2,8 @@ import React from "react";
 import MainNav from "../../components/MainNav/MainNav";
 import useAxios from "../../services/fetchDatas";
 import SideBar from "../../components/SideBar/SideBar";
-import Performance from "../../components/Performance/Performance";
+import Radar from "../../components/Radar/Radar";
+import Score from "../../components/Score/Score";
 import Activity from "../../components/Activity/Activity";
 import Sessions from "../../components/Sessions/Sessions";
 import Card from "../../components/Card/Card.js";
@@ -47,11 +48,11 @@ const Dashboard = (props) => {
           </div>
           <div className="Radar">
             {/* type d’activité - radar chart */}
-            <Performance type={activityType} />
+            <Radar type={activityType} />
           </div>
           <div className="Score">
             {/* score moyen - RadialBarChart */}
-            <Performance objective={userDatas.todayScore} />
+            <Score objective={userDatas} />
           </div>
 
           <div className="Cards">

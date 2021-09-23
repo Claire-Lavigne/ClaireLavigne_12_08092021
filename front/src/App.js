@@ -9,7 +9,6 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
 import Settings from "./pages/Settings/Settings";
 import Community from "./pages/Community/Community";
-import NotFound from "./pages/404/NotFound";
 
 function App() {
   return (
@@ -19,8 +18,7 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/settings" component={Settings} />
         <Route path="/community" component={Community} />
-        <Route path="/404" component={NotFound} />
-        <Redirect to="/404" />
+        <Redirect to="/user/:id" />
       </Switch>
     </Router>
   );

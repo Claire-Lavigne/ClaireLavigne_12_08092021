@@ -41,7 +41,7 @@ const Sessions = (props) => {
     return day;
   };
 
-  const CustomizedLegend = ({ payload }) => {
+  const CustomizedLegend = () => {
     return <p className="custom-legend">Durée moyenne des sessions</p>;
   };
 
