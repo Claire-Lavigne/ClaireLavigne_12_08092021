@@ -3,26 +3,33 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  PolarRadiusAxis,
+  Radar as RadarRecharts,
   ResponsiveContainer,
 } from "recharts";
+import "./radar.css";
 
 const Radar = (props) => {
   const activityType = props.type;
   console.log("activityType", activityType);
+  const datas = activityType.data.map((elt) => {
+    return {
+      ...elt,
+      activity: activityType.kind[elt.kind],
+    };
+  });
+  console.log(datas);
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart outerRadius={90} data={activityType.data}>
-        {/* type d’activité - radar chart */}
-        <PolarGrid />
-        <PolarAngleAxis dataKey="kind" />
-        <PolarRadiusAxis angle={30} domain={[0, 150]} />
-        <Radar
-          dataKey={activityType.kind}
-          stroke="#8884d8"
-          fill="#8884d8"
-          fillOpacity={0.6}
+      <RadarChart cx="48%" outerRadius="60%" innerRadius="5%" data={datas}>
+        <PolarGrid radialLines={false} />
+        <PolarAngleAxis
+          dataKey="activity"
+          stroke="white"
+          axisLine={false}
+          tickLine={false}
+          tickSize={12}
         />
+        <RadarRecharts dataKey="value" fill="red" fillOpacity={0.8} />
       </RadarChart>
     </ResponsiveContainer>
   );
