@@ -1,9 +1,13 @@
+.Cards {
+  grid-area: Cards;
+}
+
 .card {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  margin: 2em;
+  margin: 0 auto 3.8em auto;
   padding: 2em;
   width: 258px;
   height: 124px;

@@ -7,6 +7,7 @@ import {
   Legend,
   Tooltip,
 } from "recharts";
+import "./sessions.css";
 
 const Sessions = (props) => {
   const sessions = props.sessions;
@@ -58,54 +59,56 @@ const Sessions = (props) => {
   };
 
   return (
-    <ResponsiveContainer>
-      {/* Session durée - LineChart */}
-      <LineChart data={sessions}>
-        <Legend
-          content={<CustomizedLegend />}
-          wrapperStyle={{
-            top: 10,
-            left: 10,
-            fontSize: 15,
-            color: "white",
-            opacity: 0.5,
-            width: 145,
-          }}
-        />
-        <XAxis
-          dataKey="day"
-          tickFormatter={dayFormatter}
-          axisLine={false}
-          tickLine={false}
-          padding={{ left: 10, right: 10 }}
-          stroke="white"
-          tickMargin="10"
-        />
-        <Line
-          connectNulls
-          type="monotone"
-          dataKey="sessionLength"
-          stroke="#fff"
-          activeDot={{ r: 8 }}
-          strokeWidth={2}
-          dot={false}
-        />
-        <Tooltip
-          content={<CustomTooltip />}
-          cursor={false}
-          wrapperStyle={{
-            width: 40,
-            height: 25,
-            color: "#000",
-            backgroundColor: "#fff",
-            fontSize: 8,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        />
-      </LineChart>
-    </ResponsiveContainer>
+    <div className="Sessions">
+      <ResponsiveContainer>
+        {/* Session durée - LineChart */}
+        <LineChart data={sessions}>
+          <Legend
+            content={<CustomizedLegend />}
+            wrapperStyle={{
+              top: 10,
+              left: 10,
+              fontSize: 15,
+              color: "white",
+              opacity: 0.5,
+              width: 145,
+            }}
+          />
+          <XAxis
+            dataKey="day"
+            tickFormatter={dayFormatter}
+            axisLine={false}
+            tickLine={false}
+            padding={{ left: 10, right: 10 }}
+            stroke="white"
+            tickMargin="10"
+          />
+          <Line
+            connectNulls
+            type="monotone"
+            dataKey="sessionLength"
+            stroke="#fff"
+            activeDot={{ r: 8 }}
+            strokeWidth={2}
+            dot={false}
+          />
+          <Tooltip
+            content={<CustomTooltip />}
+            cursor={false}
+            wrapperStyle={{
+              width: 40,
+              height: 25,
+              color: "#000",
+              backgroundColor: "#fff",
+              fontSize: 8,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 

@@ -38,26 +38,11 @@ const Dashboard = (props) => {
           <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
         </header>
         <div className="grid-container">
-          <div className="Activity">
-            {/* activité quotidienne - BarChart */}
-            <Activity activity={dailyActivity} />
-          </div>
-          <div className="Sessions">
-            {/* Session durée - LineChart - jour de la semaine */}
-            <Sessions sessions={sessionsDatas} />
-          </div>
-          <div className="Radar">
-            {/* type d’activité - radar chart */}
-            <Radar type={activityType} />
-          </div>
-          <div className="Score">
-            {/* score moyen - RadialBarChart */}
-            <Score objective={userDatas} />
-          </div>
-
-          <div className="Cards">
-            <Card title={userDatas.keyData} />
-          </div>
+          <Activity activity={dailyActivity} />
+          <Sessions sessions={sessionsDatas} />
+          <Radar type={activityType} />
+          <Score objective={userDatas.todayScore || userDatas.score} />
+          <Card title={userDatas.keyData} />
         </div>
       </main>
     </div>

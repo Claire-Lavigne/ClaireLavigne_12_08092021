@@ -29,15 +29,19 @@ const Card = (props) => {
     },
   ];
 
-  return KeyData.map((item, index) => (
-    <div className="card" key={`card-${index}`}>
-      <img className="card-img" src={item.icon} alt={item.iconDesc} />
-      <div className="card-content">
-        <p className="card-title">{item.title}</p>
-        <p className="card-subtitle">{item.subtitle}</p>
-      </div>
+  return (
+    <div className="Cards">
+      {KeyData.map((item, index) => (
+        <div className="card" key={`card-${index}`}>
+          <img className="card-img" src={item.icon} alt={item.iconDesc} />
+          <div className="card-content">
+            <p className="card-title">{item.title}</p>
+            <p className="card-subtitle">{item.subtitle}</p>
+          </div>
+        </div>
+      ))}
     </div>
-  ));
+  );
 };
 
 export default Card;

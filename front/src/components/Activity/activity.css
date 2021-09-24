@@ -1,0 +1,19 @@
+.Activity {
+  grid-area: Activity;
+  width: 835px;
+  height: 320px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+}
+.recharts-tooltip-wrapper .custom-tooltip p {
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+}
+
+text.recharts-text.recharts-label {
+  font-size: 15px !important;
+  fill: #20253a;
+  transform: translate(-280px, 0px);
+}

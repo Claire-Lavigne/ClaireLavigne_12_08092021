@@ -16,30 +16,9 @@ const MainNav = (props) => {
       >
         Accueil
       </NavLink>
-      <NavLink
-        exact={true}
-        activeClassName="active"
-        to={"/profile"}
-        className="navLink"
-      >
-        Profil
-      </NavLink>
-      <NavLink
-        exact={true}
-        activeClassName="active"
-        to={"/settings"}
-        className="navLink"
-      >
-        Réglage
-      </NavLink>
-      <NavLink
-        exact={true}
-        activeClassName="active"
-        to={"/community"}
-        className="navLink"
-      >
-        Communauté
-      </NavLink>
+      <span className="navLink">Profil</span>
+      <span className="navLink">Réglage</span>
+      <span className="navLink">Communauté</span>
     </nav>
   );
 };
