@@ -6,3 +6,29 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
 }
+
+.Score h2 {
+  position: relative;
+  top: 24px;
+  left: 30px;
+  font-size: 15px;
+  color: #20253a;
+}
+
+.Score .recharts-layer.recharts-polar-angle-axis path {
+  fill: white;
+}
+
+.Score .custom-legend {
+  max-width: 95px;
+  font-size: 16px;
+  text-align: center;
+  color: #74798c;
+}
+
+.Score .custom-legend span {
+  display: block;
+  font-weight: 700;
+  font-size: 26px;
+  color: #282d30;
+}

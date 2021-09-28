@@ -7,7 +7,6 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-  Label,
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
@@ -37,6 +36,7 @@ const Activity = (props) => {
 
   return (
     <div className="Activity">
+      <h2>Activité quotidienne</h2>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={activity}
@@ -53,9 +53,7 @@ const Activity = (props) => {
             tickFormatter={dayFormatter}
             scale="point"
             padding={{ left: 15, right: 15 }}
-          >
-            <Label value="Activité quotidienne" offset={230} position="top" />
-          </XAxis>
+          ></XAxis>
           <YAxis
             dataKey="kilogram"
             orientation="right"
@@ -78,7 +76,7 @@ const Activity = (props) => {
           <Legend
             width={300}
             wrapperStyle={{
-              top: 25,
+              top: 5,
               right: 25,
               color: "#74798C",
             }}

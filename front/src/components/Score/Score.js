@@ -12,8 +12,7 @@ import "./score.css";
 const Score = (props) => {
   const score = props.objective.todayScore || props.objective.score;
   const percent = Math.round(score * 100);
-  console.log("score", score);
-  console.log("score", percent);
+  console.log("score", score, percent);
 
   const data = [
     {
@@ -23,11 +22,16 @@ const Score = (props) => {
   ];
 
   const CustomizedLegend = () => {
-    return <p className="custom-legend">Score</p>;
+    return (
+      <p className="custom-legend">
+        <span>{percent}%</span> de votre objectif
+      </p>
+    );
   };
 
   return (
     <div className="Score">
+      <h2>Score</h2>
       <ResponsiveContainer width="100%" height="100%">
         {/* score moyen - RadialBarChart */}
         <RadialBarChart
@@ -42,18 +46,14 @@ const Score = (props) => {
           <RadialBar
             clockWise={false}
             cornerRadius={50}
-            label={{ fill: "#000", position: "insideEnd" }}
             dataKey="value"
             fill="#FF0000"
           />
           <Legend
             content={<CustomizedLegend />}
             wrapperStyle={{
-              top: 10,
-              left: 10,
-              fontSize: 15,
-              color: "black",
-              width: 50,
+              top: 90,
+              left: 80,
             }}
           />
         </RadialBarChart>
