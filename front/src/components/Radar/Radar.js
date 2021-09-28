@@ -11,13 +11,13 @@ import "./radar.css";
 
 /**
  *
- * This function returns the user activities type within a Radar Chart
+ * This function returns the user activities type and datas within a Radar Chart
  *
  */
 const Radar = (props) => {
   /**
-   * Custom data
-   * copy props.kind.data array
+   * Custom data to be used in the RadarChart component
+   * copy from props.kind.data array
    * add new object from props.kind.kind array
    */
   const datas = props.kind.data.map((elt) => {
