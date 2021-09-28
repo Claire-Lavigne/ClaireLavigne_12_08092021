@@ -9,7 +9,17 @@ import {
 } from "recharts";
 import "./radar.css";
 
+/**
+ *
+ * This function returns the user activity type within a Radar Chart
+ *
+ */
 const Radar = (props) => {
+  /**
+   * Custom data
+   * copy props.kind.data array
+   * add new object from props.kind.kind array
+   */
   const datas = props.kind.data.map((elt) => {
     return {
       ...elt,
@@ -20,7 +30,6 @@ const Radar = (props) => {
   return (
     <div className="Radar">
       <ResponsiveContainer width="100%" height="100%">
-        {/* type d’activité - radar chart */}
         <RadarChart cx="48%" outerRadius="60%" innerRadius="5%" data={datas}>
           <PolarGrid radialLines={false} />
           <PolarAngleAxis

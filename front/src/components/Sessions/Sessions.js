@@ -10,10 +10,18 @@ import {
 } from "recharts";
 import "./sessions.css";
 
+/**
+ *
+ * This function returns the user sessions duration within a LineChart
+ *
+ */
 const Sessions = (props) => {
   const sessions = props.sessions.sessions;
   console.log("sessionsSessions", sessions);
 
+  /**
+   * This function returns the day with the initial (string) instead of numeric format (number)
+   */
   const dayFormatter = (day) => {
     switch (day) {
       case 1:
@@ -47,6 +55,10 @@ const Sessions = (props) => {
     return <p className="custom-legend">Durée moyenne des sessions</p>;
   };
 
+  /**
+   * @param   {boolean} 	active   the active tooltip
+   * @param   {Array} 		payload  the source data to be displayed in tooltip
+   */
   const CustomTooltip = ({ active, payload }) => {
     if (active) {
       return (
@@ -62,7 +74,6 @@ const Sessions = (props) => {
   return (
     <div className="Sessions">
       <ResponsiveContainer>
-        {/* Session durée - LineChart */}
         <LineChart data={sessions}>
           <Legend
             content={<CustomizedLegend />}

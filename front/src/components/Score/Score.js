@@ -8,16 +8,22 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./score.css";
-
+/**
+ *
+ * This function returns the user average score within a RadialBarChart
+ *
+ */
 const Score = (props) => {
   const score = props.objective.todayScore || props.objective.score;
   const percent = Math.round(score * 100);
-  console.log("score", score, percent);
+  console.log("score", percent);
 
+  /**
+   * Custom data to be used in the RadialBarChart and RadialBar components
+   */
   const data = [
     {
       value: percent,
-      maxValue: 100,
     },
   ];
 
@@ -33,22 +39,14 @@ const Score = (props) => {
     <div className="Score">
       <h2>Score</h2>
       <ResponsiveContainer width="100%" height="100%">
-        {/* score moyen - RadialBarChart */}
         <RadialBarChart
           innerRadius="90%"
           outerRadius="80%"
-          startAngle={90}
-          endAngle={450}
           barSize={10}
           data={data}
         >
-          <PolarAngleAxis type="number" tick={false} />
-          <RadialBar
-            clockWise={false}
-            cornerRadius={50}
-            dataKey="value"
-            fill="#FF0000"
-          />
+          <PolarAngleAxis range={[0, percent]} type="number" tick={false} />
+          <RadialBar cornerRadius={50} dataKey="value" fill="#FF0000" />
           <Legend
             content={<CustomizedLegend />}
             wrapperStyle={{

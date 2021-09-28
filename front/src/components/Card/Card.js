@@ -2,6 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./card.css";
 
+/**
+ *
+ * This function returns the user keydatas within cards
+ *
+ */
 const Card = (props) => {
   let KeyData = [
     {

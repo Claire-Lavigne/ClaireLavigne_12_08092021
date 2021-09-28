@@ -12,15 +12,28 @@ import {
 } from "recharts";
 import "./activity.css";
 
+/**
+ *
+ * This function returns the user daily activities within a Bar Chart
+ *
+ */
 const Activity = (props) => {
   const activity = props.activity.sessions;
   console.log("dailyActivity", activity);
 
+  /**
+   * @param   {boolean} 	date    the API date in format yyyy-mm-dd
+   * @return  {number} 	          the day of the week (ie: 15)
+   */
   const dayFormatter = (date) => {
     const day = new Date(date).getDate();
     return day;
   };
 
+  /**
+   * @param   {boolean} 	active   the active tooltip
+   * @param   {Array} 		payload  the source data to be displayed in tooltip
+   */
   const CustomTooltip = ({ active, payload }) => {
     if (active) {
       return (
@@ -43,7 +56,6 @@ const Activity = (props) => {
           barGap={10}
           margin={{ top: 100, left: 50, right: 20 }}
         >
-          {/* activité quotidienne - BARCHART - poids & calories - tooltip au survol */}
           <CartesianGrid strokeDasharray="2" vertical={false} />
           <XAxis
             tickLine={false}
