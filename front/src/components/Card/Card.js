@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./card.css";
 
 const Card = (props) => {
@@ -44,4 +45,12 @@ const Card = (props) => {
   );
 };
 
+Card.propTypes = {
+  title: PropTypes.shape({
+    calorieCount: PropTypes.number,
+    carbohydrateCount: PropTypes.number,
+    lipidCount: PropTypes.number,
+    proteinCount: PropTypes.number,
+  }),
+};
 export default Card;

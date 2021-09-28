@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import "./mainNav.css";
 
@@ -23,4 +24,7 @@ const MainNav = (props) => {
   );
 };
 
+MainNav.propTypes = {
+  userID: PropTypes.number.isRequired,
+};
 export default MainNav;

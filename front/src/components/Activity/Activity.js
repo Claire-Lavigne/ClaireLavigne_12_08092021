@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   BarChart,
   Bar,
@@ -13,7 +14,7 @@ import {
 import "./activity.css";
 
 const Activity = (props) => {
-  const activity = props.activity;
+  const activity = props.activity.sessions;
   console.log("dailyActivity", activity);
 
   const dayFormatter = (date) => {
@@ -102,6 +103,14 @@ const Activity = (props) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+Activity.propTypes = {
+  activity: PropTypes.shape({
+    calories: PropTypes.number,
+    day: PropTypes.string,
+    kilogram: PropTypes.number,
+  }),
 };
 
 export default Activity;

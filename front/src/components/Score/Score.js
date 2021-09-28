@@ -1,16 +1,26 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   RadialBarChart,
   RadialBar,
   Legend,
+  PolarAngleAxis,
   ResponsiveContainer,
 } from "recharts";
 import "./score.css";
 
 const Score = (props) => {
-  console.log(props);
-  const score = Math.round(props.objective * 100);
+  const score = props.objective.todayScore || props.objective.score;
+  const percent = Math.round(score * 100);
   console.log("score", score);
+  console.log("score", percent);
+
+  const data = [
+    {
+      value: percent,
+      maxValue: 100,
+    },
+  ];
 
   const CustomizedLegend = () => {
     return <p className="custom-legend">Score</p>;
@@ -20,12 +30,21 @@ const Score = (props) => {
     <div className="Score">
       <ResponsiveContainer width="100%" height="100%">
         {/* score moyen - RadialBarChart */}
-        <RadialBarChart data={props.objective}>
+        <RadialBarChart
+          innerRadius="90%"
+          outerRadius="80%"
+          startAngle={90}
+          endAngle={450}
+          barSize={10}
+          data={data}
+        >
+          <PolarAngleAxis type="number" tick={false} />
           <RadialBar
-            minAngle={15}
-            label={{ fill: "#000", position: "insideStart" }}
-            clockWise={true}
-            dataKey={score}
+            clockWise={false}
+            cornerRadius={50}
+            label={{ fill: "#000", position: "insideEnd" }}
+            dataKey="value"
+            fill="#FF0000"
           />
           <Legend
             content={<CustomizedLegend />}
@@ -43,4 +62,10 @@ const Score = (props) => {
   );
 };
 
+Score.propTypes = {
+  objective: PropTypes.shape({
+    todayScore: PropTypes.number,
+    score: PropTypes.number,
+  }),
+};
 export default Score;

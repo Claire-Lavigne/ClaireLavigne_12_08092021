@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import MainNav from "../../components/MainNav/MainNav";
 import useAxios from "../../services/fetchDatas";
 import SideBar from "../../components/SideBar/SideBar";
@@ -22,8 +23,8 @@ const Dashboard = (props) => {
   }
 
   let userDatas = data[0];
-  let dailyActivity = data[1].sessions;
-  let sessionsDatas = data[2].sessions;
+  let dailyActivity = data[1];
+  let sessionsDatas = data[2];
   let activityType = data[3];
 
   return (
@@ -40,13 +41,21 @@ const Dashboard = (props) => {
         <div className="grid-container">
           <Activity activity={dailyActivity} />
           <Sessions sessions={sessionsDatas} />
-          <Radar type={activityType} />
-          <Score objective={userDatas.todayScore || userDatas.score} />
+          <Radar kind={activityType} />
+          <Score objective={userDatas} />
           <Card title={userDatas.keyData} />
         </div>
       </main>
     </div>
   );
+};
+
+Dashboard.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
 };
 
 export default Dashboard;

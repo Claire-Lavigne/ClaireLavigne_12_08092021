@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   LineChart,
   Line,
@@ -10,7 +11,7 @@ import {
 import "./sessions.css";
 
 const Sessions = (props) => {
-  const sessions = props.sessions;
+  const sessions = props.sessions.sessions;
   console.log("sessionsSessions", sessions);
 
   const dayFormatter = (day) => {
@@ -110,6 +111,13 @@ const Sessions = (props) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+Sessions.propTypes = {
+  sessions: PropTypes.shape({
+    day: PropTypes.number,
+    sessionLength: PropTypes.number,
+  }),
 };
 
 export default Sessions;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   RadarChart,
   PolarGrid,
@@ -9,10 +10,10 @@ import {
 import "./radar.css";
 
 const Radar = (props) => {
-  const datas = props.type.data.map((elt) => {
+  const datas = props.kind.data.map((elt) => {
     return {
       ...elt,
-      activity: props.type.kind[elt.kind],
+      activity: props.kind.kind[elt.kind],
     };
   });
   console.log("activityType", datas);
@@ -36,4 +37,11 @@ const Radar = (props) => {
   );
 };
 
+Radar.propTypes = {
+  type: PropTypes.shape({
+    activity: PropTypes.string,
+    kind: PropTypes.number,
+    value: PropTypes.number,
+  }),
+};
 export default Radar;
