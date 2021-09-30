@@ -22,15 +22,16 @@ This is the [Original Backend Repo](https://github.com/OpenClassrooms-Student-Ce
 
 ### 2.2 Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- The library [Recharts](https://recharts.org/en-US/api) was used to build charts.
+- API fetched with Axios.
+
+#### Scripts
 
 - `cd front`
 - `yarn`
 - `yarn start`
 - Run the app on new port to [view it in browser](http://localhost:3001/user/12)
-
-Other scripts :
-
 - `yarn test`
 - `yarn build`
 
