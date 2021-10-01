@@ -16,7 +16,7 @@ import "./sessions.css";
  *
  */
 const Sessions = (props) => {
-  const sessions = props.sessions;
+  const sessions = props.sessions.sessions;
   console.log("sessionsSessions", sessions);
 
   /**

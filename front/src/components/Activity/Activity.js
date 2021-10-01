@@ -18,7 +18,7 @@ import "./activity.css";
  *
  */
 const Activity = (props) => {
-  const activity = props.activity;
+  const activity = props.activity.sessions;
   console.log("dailyActivity", activity);
 
   /**
@@ -114,11 +114,11 @@ const Activity = (props) => {
 };
 
 Activity.propTypes = {
-  activity: PropTypes.arrayOf([
-    PropTypes.number,
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  activity: PropTypes.shape({
+    calories: PropTypes.number,
+    day: PropTypes.string,
+    kilogram: PropTypes.number,
+  }),
 };
 
 export default Activity;
