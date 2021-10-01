@@ -72,6 +72,7 @@ const Activity = (props) => {
             axisLine={false}
             tickMargin={20}
             allowDataOverflow={true}
+            domain={[0, "DataMax"]}
           />
           <Tooltip
             content={<CustomTooltip />}
