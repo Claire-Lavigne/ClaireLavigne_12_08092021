@@ -16,6 +16,7 @@ import "./score.css";
 const Score = (props) => {
   const score = props.objective.todayScore || props.objective.score;
   const percent = Math.round(score * 100);
+  const percircle = Math.round(score * 360);
   console.log("score", percent);
 
   /**
@@ -45,7 +46,7 @@ const Score = (props) => {
           barSize={10}
           data={data}
         >
-          <PolarAngleAxis range={[0, percent]} type="number" tick={false} />
+          <PolarAngleAxis range={[0, percircle]} type="number" tick={false} />
           <RadialBar cornerRadius={50} dataKey="value" fill="#FF0000" />
           <Legend
             content={<CustomizedLegend />}

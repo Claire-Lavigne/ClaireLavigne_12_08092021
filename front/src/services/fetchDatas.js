@@ -17,9 +17,11 @@ const useAxios = (userID) => {
           axios.get(`/user/${userID}/average-sessions`),
           axios.get(`/user/${userID}/performance`),
         ])
+        // handle response
         .then(
           axios.spread((...responses) => {
             const allResp = [];
+            console.log(responses);
             const userMainInfos = responses[0].data.data;
             const userActivity = responses[1].data.data;
             const userSessions = responses[2].data.data;
@@ -34,6 +36,7 @@ const useAxios = (userID) => {
             setIsLoading(false);
           })
         );
+      // handle error
     } catch (error) {
       setIsLoading(false);
       setIsError(true);

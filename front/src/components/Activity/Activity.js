@@ -18,7 +18,7 @@ import "./activity.css";
  *
  */
 const Activity = (props) => {
-  const activity = props.activity.sessions;
+  const activity = props.activity;
   console.log("dailyActivity", activity);
 
   /**
@@ -67,10 +67,8 @@ const Activity = (props) => {
             padding={{ left: 15, right: 15 }}
           ></XAxis>
           <YAxis
-            dataKey="kilogram"
             orientation="right"
             tickLine={false}
-            domain={["dataMin", "dataMax"]}
             axisLine={false}
             tickMargin={20}
             allowDataOverflow={true}
@@ -116,11 +114,11 @@ const Activity = (props) => {
 };
 
 Activity.propTypes = {
-  activity: PropTypes.shape({
-    calories: PropTypes.number,
-    day: PropTypes.string,
-    kilogram: PropTypes.number,
-  }),
+  activity: PropTypes.arrayOf([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.number,
+  ]),
 };
 
 export default Activity;

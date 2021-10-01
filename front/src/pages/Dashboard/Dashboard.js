@@ -21,10 +21,9 @@ const Dashboard = (props) => {
   if (isError) {
     return <div>Error fetching data</div>;
   }
-
   let userDatas = data[0];
-  let dailyActivity = data[1];
-  let sessionsDatas = data[2];
+  let dailyActivity = data[1].sessions;
+  let sessionsDatas = data[2].sessions;
   let activityType = data[3];
 
   return (
