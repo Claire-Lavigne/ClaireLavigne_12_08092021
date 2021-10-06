@@ -67,6 +67,7 @@ const Activity = (props) => {
             padding={{ left: 15, right: 15 }}
           ></XAxis>
           <YAxis
+            tickCount={4}
             orientation="right"
             tickLine={false}
             axisLine={false}

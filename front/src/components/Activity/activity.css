@@ -1,4 +1,5 @@
 .Activity {
+  margin-bottom: 10px;
   grid-area: Activity;
   width: 835px;
   height: 320px;
