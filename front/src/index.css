@@ -8,36 +8,8 @@ body,
   box-sizing: border-box;
 }
 
-.wrapper {
-  position: relative;
-  background: var(--dark);
-}
-
-main {
-  position: absolute;
-  width: calc(100% - 117px);
-  height: calc(100% - 90px);
-  top: 90px;
-  left: 117px;
-  background: white;
-  padding: 4em;
-}
-
-@media only screen and (max-width: 800px) {
-  main {
-    top: 180px;
-    width: calc(100% - 180px);
-  }
-}
-
 section {
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
-}
-
-.construction {
-  font-size: 3em;
-  margin: 2em auto;
-  text-align: center;
 }

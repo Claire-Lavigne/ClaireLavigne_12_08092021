@@ -12,7 +12,6 @@ import "./dashboard.css";
 
 const Dashboard = (props) => {
   const userID = props.match.params.id;
-
   const { isLoading, isError, data } = useAxios(userID);
 
   if (isLoading) {
@@ -21,16 +20,17 @@ const Dashboard = (props) => {
   if (isError) {
     return <div>Error fetching data</div>;
   }
+
   let userDatas = data[0];
   let dailyActivity = data[1];
   let sessionsDatas = data[2];
   let activityType = data[3];
 
   return (
-    <div className="wrapper">
+    <>
       <MainNav userID={userDatas.id} />
-      <SideBar />
       <main className="dashboard">
+        <SideBar />
         <header>
           <h1>
             Bonjour <span>{userDatas.userInfos.firstName}</span>
@@ -45,7 +45,7 @@ const Dashboard = (props) => {
           <Card title={userDatas.keyData} />
         </div>
       </main>
-    </div>
+    </>
   );
 };
 

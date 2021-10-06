@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import "./mainNav.css";
 
-const MainNav = (props) => {
+const MainNav = ({ userID }) => {
   return (
     <nav className="mainNav">
-      <Link className="navLink" to={`/user/${props.userID}`}>
+      <Link className="navLink" to={`/user/${userID}`}>
         <img className="logo" src="/assets/logo.png" alt="Logo Kasa" />
       </Link>
       <NavLink
         exact={true}
         activeClassName="active"
-        to={`/user/${props.userID}`}
+        to={`/user/${userID}`}
         className="navLink"
       >
         Accueil
