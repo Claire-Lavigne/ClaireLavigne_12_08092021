@@ -8,9 +8,10 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./score.css";
+
 /**
  *
- * This function returns the user average score within a RadialBarChart
+ * This composent displays the user average score within a RadialBarChart
  *
  */
 const Score = (props) => {

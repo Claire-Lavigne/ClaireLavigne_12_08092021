@@ -14,7 +14,7 @@ import "./activity.css";
 
 /**
  *
- * This function returns the user daily activities within a Bar Chart
+ * This composent displays the user daily activities within a Bar Chart
  *
  */
 const Activity = (props) => {

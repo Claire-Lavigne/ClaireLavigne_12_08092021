@@ -12,7 +12,7 @@ import "./sessions.css";
 
 /**
  *
- * This function returns the user sessions duration within a LineChart
+ * This composent displays the user sessions duration within a LineChart
  *
  */
 const Sessions = (props) => {
@@ -20,7 +20,7 @@ const Sessions = (props) => {
   console.log("sessionsSessions", sessions);
 
   /**
-   * This function returns the day with the initial (string) instead of numeric format (number)
+   * This composent displays the day with the initial (string) instead of numeric format (number)
    */
   const dayFormatter = (day) => {
     switch (day) {

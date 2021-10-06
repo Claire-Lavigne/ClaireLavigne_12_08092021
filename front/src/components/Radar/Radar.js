@@ -11,7 +11,7 @@ import "./radar.css";
 
 /**
  *
- * This function returns the user activities type and datas within a Radar Chart
+ * This composent displays the user activities type and datas within a Radar Chart
  *
  */
 const Radar = (props) => {

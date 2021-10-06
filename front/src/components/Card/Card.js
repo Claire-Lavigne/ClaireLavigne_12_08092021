@@ -4,7 +4,7 @@ import "./card.css";
 
 /**
  *
- * This function returns the user keydatas within cards
+ * This composent displays the user keydatas within cards
  *
  */
 const Card = (props) => {
