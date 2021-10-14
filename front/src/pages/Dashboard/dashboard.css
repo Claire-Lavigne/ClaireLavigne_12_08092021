@@ -38,7 +38,7 @@ header {
     "Sessions Radar Score Cards";
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1024px) {
+@media only screen and (min-width: 300px) and (max-width: 1260px) {
   .dashboard .grid-container {
     grid-template-areas:
       "Activity Activity Activity"
