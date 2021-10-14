@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/user/:id" component={Dashboard} />
-        <Redirect to="/user/:id" />
+        <Route path="/user/:id" component={Dashboard} />
+        <Redirect to="/user/12" />
       </Switch>
     </Router>
   );
