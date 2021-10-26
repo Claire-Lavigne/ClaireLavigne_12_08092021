@@ -4,6 +4,7 @@ import {
   LineChart,
   Line,
   XAxis,
+  Rectangle,
   ResponsiveContainer,
   Legend,
   Tooltip,

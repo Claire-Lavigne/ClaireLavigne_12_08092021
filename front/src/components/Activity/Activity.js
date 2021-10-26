@@ -7,6 +7,7 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  Rectangle,
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
@@ -47,6 +48,17 @@ const Activity = (props) => {
     return null;
   };
 
+  /**
+   * @param   {number} 	x        horizontal axis ref
+   * @param   {number} 	y        vertical axis ref
+   * @param   {number} 	height   height of background cursor
+   */
+  const CustomCursor = ({ x, y, height }) => {
+    return (
+      <Rectangle fill="#C4C4C480" x={x - 25} y={y} width={50} height={height} />
+    );
+  };
+
   return (
     <div className="Activity">
       <h2>Activité quotidienne</h2>
@@ -76,8 +88,10 @@ const Activity = (props) => {
             domain={[0, "DataMax"]}
           />
           <Tooltip
+            cursor={<CustomCursor />}
             content={<CustomTooltip />}
             wrapperStyle={{
+              marginLeft: 20,
               fontSize: 7,
               width: 40,
               height: 63,

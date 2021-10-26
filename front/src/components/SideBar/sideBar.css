@@ -1,7 +1,8 @@
 .sideBar {
   position: absolute;
+  z-index: -1;
   left: 0;
-  top: -90px;
+  top: 0;
   height: 100vh;
   width: 117px;
   background: #020203;
@@ -11,16 +12,4 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-@media only screen and (max-width: 800px) {
-  .sideBar {
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width: 300px) and (max-width: 1024px) {
-  .sideBar {
-    height: 130vh;
-  }
 }

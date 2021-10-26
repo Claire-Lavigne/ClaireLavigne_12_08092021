@@ -1,8 +1,8 @@
 .Activity {
   margin-bottom: 10px;
   grid-area: Activity;
-  width: 835px;
-  height: 320px;
+  width: 635px;
+  height: 250px;
   background: #fbfbfb;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
@@ -19,4 +19,11 @@
   left: 30px;
   font-size: 15px;
   color: #20253a;
+}
+
+@media only screen and (min-width: 1025px) {
+  .Activity {
+    height: 320px;
+    width: 835px;
+  }
 }

@@ -1,7 +1,7 @@
 .Score {
   grid-area: Score;
-  width: 258px;
-  height: 263px;
+  width: 200px;
+  height: 200px;
   background: #fbfbfb;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
@@ -31,4 +31,18 @@
   font-weight: 700;
   font-size: 26px;
   color: #282d30;
+}
+
+@media only screen and (min-width: 1025px) {
+  .Score {
+    width: 258px;
+    height: 263px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .Score .recharts-legend-wrapper {
+    top: 65px !important;
+    left: 55px !important;
+  }
 }

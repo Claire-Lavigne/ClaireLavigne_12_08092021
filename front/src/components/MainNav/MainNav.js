@@ -1,18 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 import "./mainNav.css";
 
-const MainNav = ({ userID }) => {
+const MainNav = () => {
   return (
     <nav className="mainNav">
-      <Link className="navLink" to={`/user/${userID}`}>
+      <Link className="navLink" to={`/user/`}>
         <img className="logo" src="/assets/logo.png" alt="Logo Kasa" />
       </Link>
       <NavLink
         exact={true}
         activeClassName="active"
-        to={`/user/${userID}`}
+        to={`/user/`}
         className="navLink"
       >
         Accueil
@@ -24,7 +23,4 @@ const MainNav = ({ userID }) => {
   );
 };
 
-MainNav.propTypes = {
-  userID: PropTypes.number.isRequired,
-};
 export default MainNav;

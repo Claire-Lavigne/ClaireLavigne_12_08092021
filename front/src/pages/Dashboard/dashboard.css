@@ -1,7 +1,5 @@
 main {
   padding: 2em;
-  overflow: hidden;
-  position: relative;
 }
 
 header {
@@ -11,7 +9,7 @@ header {
 
 .dashboard header h1 {
   font-size: 48px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
 }
 
 .dashboard header h1 span {
@@ -21,15 +19,14 @@ header {
 .dashboard header p {
   font-weight: 400;
   font-size: 18px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .dashboard .grid-container {
   position: relative;
   left: 120px;
-  max-width: 200px;
+  max-width: calc(1000px - 120px - 4em);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 20px;
   grid-auto-flow: row;
@@ -38,11 +35,16 @@ header {
     "Sessions Radar Score Cards";
 }
 
-@media only screen and (min-width: 300px) and (max-width: 1260px) {
-  .dashboard .grid-container {
-    grid-template-areas:
-      "Activity Activity Activity"
-      "Sessions Radar Score"
-      "Cards Cards .";
+@media only screen and (min-width: 1025px) {
+  .Score {
+    max-width: 1124px;
+  }
+
+  .dashboard header h1 {
+    padding-bottom: 24px;
+  }
+
+  .dashboard header p {
+    margin-bottom: 2em;
   }
 }
