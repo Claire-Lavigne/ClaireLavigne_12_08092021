@@ -19,9 +19,10 @@ const Dashboard = (props) => {
   if (isLoading) {
     return <div>Chargement des données en cours...</div>;
   }
-  if (isError) {
+  if (isError || data.length === 0) {
     return <div>Error fetching data</div>;
   }
+
   console.log(data);
   let userDatas = data[0];
   let dailyActivity = data[1];
@@ -30,9 +31,9 @@ const Dashboard = (props) => {
 
   return (
     <>
-      <MainNav userID={userDatas.id} />
+      <MainNav />
+      <SideBar />
       <main className="dashboard">
-        <SideBar />
         <header>
           <h1>
             Bonjour <span>{userDatas.userInfos.firstName}</span>
