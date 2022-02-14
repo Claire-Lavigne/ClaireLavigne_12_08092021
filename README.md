@@ -1,19 +1,17 @@
-# Project 12 - SportSee - Front-end Dashboard + API
-
-SportSee is a sports analytics dashboard 
+# Project 12 - SportSee (React + API) - A sports analytics dashboard 
 
 <img src="https://github.com/Claire-Lavigne/repo-images/blob/main/SportSee.JPG" width="80%">
 
-## 1. Prerequisites
+# Getting started
+
+## Prerequisites
 
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 
 If you are working with several versions of NodeJS, you can install [nvm](https://github.com/nvm-sh/nvm) to easily manage your NodeJS versions.
 
-## 2. Lauch the project
-
-### 2.1 Back End
+## Back End
 
 This is the [Original Backend Repo](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 
@@ -22,22 +20,17 @@ This is the [Original Backend Repo](https://github.com/OpenClassrooms-Student-Ce
 - `yarn dev`
 - [View JSON in browser](http://localhost:3000/user/12)
 
-### 2.2 Front End
+## Front End
 
-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - The library [Recharts](https://recharts.org/en-US/api) was used to build charts.
 - API fetched with Axios.
-
-#### Scripts
 
 - `cd front`
 - `yarn`
 - `yarn start`
 - Run the app on new port to [view it in browser](http://localhost:3001/user/12)
-- `yarn test`
-- `yarn build`
 
-## 3. Possible endpoints
+# Possible endpoints
 
 This project includes four endpoints that you will be able to use:
 
@@ -48,7 +41,7 @@ This project includes four endpoints that you will be able to use:
 
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
-### 3.1 Examples of queries
+# Examples of queries
 
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.
