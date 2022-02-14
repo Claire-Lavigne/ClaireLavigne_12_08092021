@@ -1,6 +1,8 @@
-# Project 12 - Front-end Dashboard
+# Project 12 - SportSee - Front-end Dashboard + API
 
-This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
+SportSee is a sports analytics dashboard 
+
+<img src="https://github.com/Claire-Lavigne/repo-images/blob/main/SportSee.JPG" width="80%">
 
 ## 1. Prerequisites
 
