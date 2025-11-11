@@ -1,4 +1,4 @@
-import React from "react";
+
 // import { USER_MAIN_DATA } from "../../data";
 import PropTypes from "prop-types";
 import MainNav from "../../components/MainNav/MainNav";
@@ -14,16 +14,16 @@ import "./dashboard.css";
 const Dashboard = (props) => {
   const userID = props.match.params.id;
   // const userID = USER_MAIN_DATA[0].id;
+  
   const { isLoading, isError, data } = useAxios(userID);
 
   if (isLoading) {
-    return <div>Chargement des données en cours...</div>;
+    return <div>Fetching data...</div>;
   }
   if (isError || data.length === 0) {
     return <div>Error fetching data</div>;
   }
 
-  console.log(data);
   let userDatas = data[0];
   let dailyActivity = data[1];
   let sessionsDatas = data[2];

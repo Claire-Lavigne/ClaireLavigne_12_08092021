@@ -1,10 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import {
   LineChart,
   Line,
   XAxis,
-  Rectangle,
   ResponsiveContainer,
   Legend,
   Tooltip,

@@ -1,6 +1,6 @@
 // https://blog.openreplay.com/data-fetching-techniques-with-react
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 const useAxios = (userID) => {
@@ -9,7 +9,7 @@ const useAxios = (userID) => {
   const [isError, setIsError] = useState(false);
 
   // async makes the function return a promise (value)
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       // await : used in async function to wait for the promise to be resolved
       await axios
@@ -45,11 +45,13 @@ const useAxios = (userID) => {
       setIsError(true);
       console.log("Error fetching data: ", error);
     }
-  };
+  }, [userID]);
+
   // The fetchData function is called in the useEffect hook which runs once when the component is mounted
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
+
   return { isLoading, isError, data };
 };
 
