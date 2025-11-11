@@ -1,28 +1,19 @@
-# Project 12 | SportSee – Sports Analytics Dashboard (React + API)
+# Project 12 | SportSee Dashboard (React + API)
 
-![React](https://img.shields.io/badge/React-17.0.2-blue?logo=react&logoColor=white)
-![Recharts](https://img.shields.io/badge/Recharts-2.1.2-blue)
-![Axios](https://img.shields.io/badge/Axios-0.21.4-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-blue?logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-17.0.2-61DAFB?logo=react&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-2.1.2-3B82F6?logo=recharts&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-0.21.4-3B6BE3?logo=axios&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 
 SportSee is a sports analytics dashboard where users can visualize their daily activity, performance, and nutrition data.
 
-This repository is organized in two parts:
+✅ Interact with a **REST API** using **Axios**  
+✅ Develop advanced **data visualizations** with **Recharts**  
+✅ Ensure **data quality** (formatting, adapters, error handling)  
+✅ Produce clear **technical documentation** for a web application  
 
-- `back/` – Node/Express API (mocked backend already provided by OpenClassrooms)
-- `front/` – React application (developed by me)
-
+` `  
 <img src="https://github.com/Claire-Lavigne/repo-images/blob/main/SportSee.JPG" width="80%">
-
-
-## Project Goals
-
-This project demonstrates the ability to:
-
-- Interact with a **REST API** using **Axios**
-- Develop advanced **data visualizations** with **Recharts**
-- Ensure **data quality** (formatting, adapters, error handling)
-- Produce clear **technical documentation** for a web application
 
 ## Stack
 
@@ -34,7 +25,7 @@ This project demonstrates the ability to:
 - JavaScript
 - CSS
 
-**Back-end**
+**Back-end** (provided by OpenClassrooms)
 
 - Node.js
 - Express
