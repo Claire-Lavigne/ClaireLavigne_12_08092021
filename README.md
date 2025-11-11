@@ -7,10 +7,10 @@
 
 SportSee is a sports analytics dashboard where users can visualize their daily activity, performance, and nutrition data.
 
-✅ Interact with a **REST API** using **Axios**  
-✅ Develop advanced **data visualizations** with **Recharts**  
-✅ Ensure **data quality** (formatting, adapters, error handling)  
-✅ Produce clear **technical documentation** for a web application  
+✔️ Interact with a **REST API** using **Axios**  
+✔️ Develop advanced **data visualizations** with **Recharts**  
+✔️ Ensure **data quality** (formatting, adapters, error handling)  
+✔️ Produce clear **technical documentation** for a web application  
 
 ` `  
 <img src="https://github.com/Claire-Lavigne/repo-images/blob/main/SportSee.JPG" width="80%">
